@@ -12,6 +12,10 @@ class MyDocument extends Document {
         <body className="bg-gray-cust">
           <Main />
           <NextScript />
+          <script
+            defer
+            src="https://www.gofundme.com/static/js/embed.js"
+          ></script>
         </body>
       </Html>
     );
