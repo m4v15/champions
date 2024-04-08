@@ -6,7 +6,7 @@ import { AboutContent } from './AboutContent';
 import { Hero } from './Hero';
 import { NavBar } from './NavBar';
 
-const GFMs = dynamic(() => import('./GFMS'), { ssr: false });
+const GFMs = dynamic(() => import('./GFMs'), { ssr: false });
 
 const Base = () => (
   <div className="text-gray-600 antialiased">
