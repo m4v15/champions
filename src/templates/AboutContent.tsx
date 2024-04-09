@@ -1,12 +1,11 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 import { Button } from '@/button/Button';
 
 import { Section } from '../layout/Section';
 
 const AboutContent = () => {
-  const router = useRouter();
+  // const router = useRouter();
 
   return (
     <Section yPadding="pb-32">
