@@ -17,6 +17,9 @@ const NavBar = () => (
         <li>
           <Link href="/sign-up">Sign Up</Link>
         </li>
+        <li>
+          <Link href="/press">Press</Link>
+        </li>
       </NavbarTwoColumns>
     </div>
     <div className="h-20"></div>
