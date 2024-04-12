@@ -18,6 +18,9 @@ const NavBar = () => (
           <Link href="/sign-up">Sign Up</Link>
         </li>
         <li>
+          <Link href="/funds">Funds</Link>
+        </li>
+        <li>
           <Link href="/press">Press</Link>
         </li>
       </NavbarTwoColumns>

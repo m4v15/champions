@@ -34,6 +34,9 @@ const Hero = () => (
           </Link>
         }
       />
+      <Link href="/funds">
+        <Button>See the funds we&apos;re supporting</Button>
+      </Link>
     </Section>
   </div>
 );
