@@ -34,6 +34,14 @@ const Hero = () => (
           </Link>
         }
       />
+      <Link
+        href="https://docs.google.com/forms/d/15cm3Ujy3H7PMGfceLG3fpCi8jRd4Cip1wzjPgbGLKSU/viewform?ts=66269362&edit_requested=true"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <Button>Volunteer to set up a GoFundMe</Button>
+      </Link>
+      <br />
       <Link href="/funds">
         <Button>See the funds we&apos;re supporting</Button>
       </Link>
