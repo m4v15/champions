@@ -1,4 +1,4 @@
-import { SignUp } from '@/templates/SignUp';
+import { SignUp } from '@/templates/Volunteer';
 
 const Index = () => <SignUp />;
 
