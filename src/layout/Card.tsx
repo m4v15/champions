@@ -9,27 +9,24 @@ type ICardProps = {
 };
 
 export const Card = (props: ICardProps) => (
-  <div className="m-2 max-w-sm rounded-lg border border-gray-200 bg-white shadow dark:border-gray-700 dark:bg-gray-800">
+  <div className="m-2 max-w-sm rounded-lg border border-gray-200 bg-white shadow">
     <Link href={props.url} rel="noopener noreferrer" target="_blank">
       <img className="rounded-t-lg" src={props.imageUrl} alt="" />
     </Link>
     <div className="p-5">
       <Link href={props.url} rel="noopener noreferrer" target="_blank">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
           {props.title}
         </h5>
       </Link>
       <div className="mb-3 flex items-center justify-start">
-        <p className="mr-2 text-xl font-bold text-gray-700 dark:text-gray-400">
+        <p className="mr-2 text-xl font-bold text-gray-700">
           {props.progress} raised so far
         </p>
-        {/* <p className="font-normal text-gray-700 dark:text-gray-400">
-          {props.target}
-        </p> */}
       </div>
       <Link
         href={`${props.url}/donate`}
-        className="inline-flex items-center rounded-lg bg-red-500 px-3 py-2 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+        className="inline-flex items-center rounded-lg bg-red-500 px-3 py-2 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-red-300 "
         rel="noopener noreferrer"
         target="_blank"
       >

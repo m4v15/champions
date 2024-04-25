@@ -24,18 +24,18 @@ const SignUp = () => (
     <div className="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <div className="grid gap-8 sm:grid-cols-2 sm:items-start">
         <div className="sm:order-1">
-          <h2 className="text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight dark:text-neutral-200">
+          <h2 className="text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight">
             Be a Champion
           </h2>
 
           <div className="mt-6 flex-col items-center sm:mt-10">
-            <p className="ms-1 font-semibold text-gray-800 sm:mb-1 sm:ms-2 dark:text-neutral-200">
+            <p className="ms-1 font-semibold text-gray-800 sm:mb-1 sm:ms-2">
               Championing a fund means you take on an existing GoFundMe for a
               Gazan family and do your best to fundraise using online and
               offline methods.
             </p>
             <br />
-            <p className="ms-1 text-gray-800 sm:mb-1 sm:ms-2 dark:text-neutral-200">
+            <p className="ms-1 text-gray-800 sm:mb-1 sm:ms-2">
               This could include posting on your social media, hosting a
               fundraiser dinner, raffling art or other goods, or other creative
               ideas. We have a collection of crowdsourced ideas, so you
@@ -57,18 +57,18 @@ const SignUp = () => (
           </Link>
         </div>
         <div className="sm:order-2">
-          <h2 className="text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight dark:text-neutral-200">
+          <h2 className="text-2xl font-bold text-gray-800 md:text-3xl lg:text-4xl lg:leading-tight xl:text-5xl xl:leading-tight">
             Connect your account
           </h2>
 
           <div className="mt-6 flex-col items-center sm:mt-10">
-            <p className="ms-1 font-semibold text-gray-800 sm:mb-1 sm:ms-2 dark:text-neutral-200">
+            <p className="ms-1 font-semibold text-gray-800 sm:mb-1 sm:ms-2">
               Many Palestinians in Gaza are unable to set up a GoFundMe due to
               restrictions on GoFundMe (and other fundraising platforms) for
               connecting Palestinian bank accounts to the website.
             </p>
             <br />
-            <p className="ms-1 text-gray-800 sm:mb-1 sm:ms-2 dark:text-neutral-200">
+            <p className="ms-1 text-gray-800 sm:mb-1 sm:ms-2">
               For this reason many Palestinians have set up an initial
               fundraising page but need someone in the West to connect their
               bank account, and then commit to transfering the money to the
