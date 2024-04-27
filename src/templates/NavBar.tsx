@@ -21,7 +21,7 @@ const NavBar = () => (
           <Link href="/funds">Funds</Link>
         </li>
         <li>
-          <Link href="/press">Press</Link>
+          <Link href="/links">Links</Link>
         </li>
       </NavbarTwoColumns>
     </div>

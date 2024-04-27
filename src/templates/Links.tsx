@@ -8,14 +8,36 @@ import { Meta } from '../layout/Meta';
 import { AppConfig } from '../utils/AppConfig';
 import { NavBar } from './NavBar';
 
-const Press = () => (
+const Links = () => (
   <div className="text-gray-600 antialiased">
     <Meta title={AppConfig.title} description={AppConfig.description} />
     <NavBar></NavBar>
     <Section yPadding="pb-32">
       <div className="mt-5 flex flex-col items-center text-gray-950">
         <div className="w-full text-left">
-          <div className="font-bold">
+          <div className="text-2xl font-bold">
+            Other Projects we are part of
+          </div>
+          <br />
+          <ExternalLink
+            url="https://opencollective.com/mutual-aid-gaza/projects/emergency-fund-gsg"
+            text="Gaza Mutual Aid fund - all money is sent directly to Palestinians in Gaza"
+          />
+          <br />
+          <br />
+          <ExternalLink
+            url="https://gaza.online"
+            text="Gaza Online - distributing e-sims to people in Gaza"
+          />
+          <br />
+          <br />
+          <ExternalLink
+            url="https://www.instagram.com/gazamemorymap/"
+            text="GazaMemoryMap roots Palestinian memory to land, affirming the inextinguishable truth that Gaza will always belong to the people of Palestine."
+          />
+          <br />
+          <br />
+          <div className="text-2xl font-bold">
             Gaza Fundraising Coverage in the Media
           </div>
           <br />
@@ -44,4 +66,4 @@ const Press = () => (
   </div>
 );
 
-export { Press };
+export { Links };
