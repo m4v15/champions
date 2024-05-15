@@ -21,7 +21,7 @@ export const Card = (props: ICardProps) => (
       </Link>
       <div className="mb-3 flex items-center justify-start">
         <p className="mr-2 text-xl font-bold text-gray-700">
-          {props.progress} raised so far
+          ${props.progress} raised so far
         </p>
       </div>
       <Link

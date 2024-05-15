@@ -12,36 +12,24 @@ export function GfmsContainer() {
   if (error) return <div>Failed to load</div>;
   if (isLoading) return <div>Loading...</div>;
   if (!data.result) return <div>Failed to load</div>;
-  const formattedGfms = data.result
-    .map(
-      (gfm: {
+  const formattedGfms = data.result.sort(
+    (
+      a: {
         title: string;
         url: string;
         imageurl: string;
-        progress: string;
-      }) => ({
-        ...gfm,
-        rawProgress: Number(gfm.progress.replace(/[^0-9.-]+/g, '')),
-      }),
-    )
-    .sort(
-      (
-        a: {
-          title: string;
-          url: string;
-          imageurl: string;
-          progress: string;
-          rawProgress: number;
-        },
-        b: {
-          title: string;
-          url: string;
-          imageurl: string;
-          progress: string;
-          rawProgress: number;
-        },
-      ) => a.rawProgress - b.rawProgress,
-    );
+        progress: number;
+        target: number;
+      },
+      b: {
+        title: string;
+        url: string;
+        imageurl: string;
+        progress: number;
+        target: number;
+      },
+    ) => a.progress - b.progress,
+  );
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
@@ -59,14 +47,14 @@ export function GfmsContainer() {
 
   return (
     <>
-      <div className="ml-2 flex max-w-xs items-center">
+      <div className="mb-2 ml-1 flex max-w-xs items-center">
         <label htmlFor="filter" className="sr-only">
-          Filter GoFundMes
+          Search
         </label>
         <input
-          className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
+          className="block w-full border-gray-800 bg-gray-50 p-1 text-sm text-gray-900 focus:border-blue-500 focus:ring-blue-500"
           onChange={handleChange}
-          placeholder="Filter by title"
+          placeholder="Search"
           type="text"
           id="filter"
         />
@@ -77,15 +65,16 @@ export function GfmsContainer() {
             title: string;
             url: string;
             imageurl: string;
-            progress: string;
+            progress: number;
+            target: number;
           }) => {
             return (
               <Card
                 title={gfm.title}
                 imageUrl={gfm.imageurl}
-                progress={gfm.progress}
+                progress={`${gfm.progress}`}
                 url={gfm.url}
-                target=""
+                target={`${gfm.target}`}
                 key={gfm.url}
               />
             );
