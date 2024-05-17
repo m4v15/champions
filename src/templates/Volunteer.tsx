@@ -1,10 +1,6 @@
 import Link from 'next/link';
 
-import { Meta } from '@/layout/Meta';
-import { AppConfig } from '@/utils/AppConfig';
-
 import { Button } from '../button/Button';
-import { NavBar } from './NavBar';
 
 const SignUp = () => (
   // <div className="text-gray-600 antialiased">
@@ -19,8 +15,6 @@ const SignUp = () => (
   //   </iframe>
   // </div>
   <div className="text-gray-600 antialiased">
-    <Meta title={AppConfig.title} description={AppConfig.description} />
-    <NavBar></NavBar>
     <div className="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <div className="grid gap-8 sm:grid-cols-2 sm:items-start">
         <div className="sm:order-1">

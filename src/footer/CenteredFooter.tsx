@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { AppConfig } from '@/utils/AppConfig';
 
 const CenteredFooter = () => (
-  <footer className="fixed bottom-0 w-full bg-white p-4 text-xs shadow md:flex md:items-center md:justify-between md:p-6 xl:p-8">
+  <footer className=" w-full bg-white p-4 text-xs shadow md:flex md:items-center md:justify-between md:p-6 xl:p-8">
     <ul className="mb-6 flex flex-wrap items-center md:mb-0">
       <li className="footer-copyright">
         © Copyright {new Date().getFullYear()} {AppConfig.title}. Made with{' '}

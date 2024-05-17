@@ -6,7 +6,7 @@ import { Logo } from './Logo';
 
 const NavBar = () => (
   <>
-    <div className="border-gray fixed top-0 mx-auto w-full border-b bg-gray-50 px-3 py-6">
+    <div className="border-gray mx-auto w-full border-b bg-gray-50 px-3 py-6">
       <NavbarTwoColumns logo={<Logo />}>
         <li>
           <Link href="/about" className="text-gray-500 hover:text-gray-900">
