@@ -68,16 +68,19 @@ export function GfmsContainer() {
             progress: number;
             target: number;
           }) => {
-            return (
-              <Card
-                title={gfm.title}
-                imageUrl={gfm.imageurl}
-                progress={`${gfm.progress}`}
-                url={gfm.url}
-                target={`${gfm.target}`}
-                key={gfm.url}
-              />
-            );
+            if (gfm.imageurl && gfm.title) {
+              return (
+                <Card
+                  title={gfm.title}
+                  imageUrl={gfm.imageurl}
+                  progress={`${gfm.progress}`}
+                  url={gfm.url}
+                  target={`${gfm.target}`}
+                  key={gfm.url}
+                />
+              );
+            }
+            return <></>;
           },
         )}
       </div>
