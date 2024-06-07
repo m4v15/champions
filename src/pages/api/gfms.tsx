@@ -1,6 +1,11 @@
 import { sql } from '@vercel/postgres';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import NextCors from 'nextjs-cors';
+import type { NextRequest } from 'next/server';
+
+import cors from '@/pages/api/_lib/cors';
+
+export const config = {
+  runtime: 'edge',
+};
 
 async function fetchGFMs() {
   try {
@@ -15,20 +20,23 @@ async function fetchGFMs() {
   }
 }
 
-export default async function handler(
-  _req: NextApiRequest,
-  res: NextApiResponse,
-) {
-  await NextCors(_req, res, {
-    // Options
-    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
-    origin: '*',
-    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-  });
+export default async function handler(_req: NextRequest) {
   try {
     const result = await fetchGFMs();
-    res.status(200).json({ result });
+    return await cors(
+      _req,
+      new Response(JSON.stringify({ result }), {
+        status: 200,
+        headers: { 'Content-Type': 'application/json' },
+      }),
+    );
   } catch (err) {
-    res.status(500).json({ error: 'failed to load data' });
+    return cors(
+      _req,
+      new Response(JSON.stringify({ message: 'ERROR' }), {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' },
+      }),
+    );
   }
 }
