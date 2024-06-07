@@ -1,28 +1,6 @@
 import { sql } from '@vercel/postgres';
-import Cors from 'cors';
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-const cors = Cors({
-  methods: ['POST', 'GET', 'HEAD'],
-});
-
-// Helper method to wait for a middleware to execute before continuing
-// And to throw an error when an error happens in a middleware
-function runMiddleware(
-  req: NextApiRequest,
-  res: NextApiResponse,
-  fn: Function,
-) {
-  return new Promise((resolve, reject) => {
-    fn(req, res, (result: any) => {
-      if (result instanceof Error) {
-        return reject(result);
-      }
-
-      return resolve(result);
-    });
-  });
-}
+import NextCors from 'nextjs-cors';
 
 async function fetchGFMs() {
   try {
@@ -41,8 +19,12 @@ export default async function handler(
   _req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  await runMiddleware(_req, res, cors);
-
+  await NextCors(_req, res, {
+    // Options
+    methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
+    origin: '*',
+    optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
+  });
   try {
     const result = await fetchGFMs();
     res.status(200).json({ result });
