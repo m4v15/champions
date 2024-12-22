@@ -18,11 +18,12 @@ const Hero = () => (
         title={
           <>
             <span className="text-3xl text-gray-900">
-              Connect with and champion Gazan families trying to flee genocide
+              Connect with and champion Gazan families trying to survive
+              genocide
             </span>
           </>
         }
-        description="We are a collective of allies around the world who are connecting with families in Gaza as pen pals and champions for their fundraising campaigns to escape the violence in Gaza.  
+        description="We are a collective of allies around the world who are connecting with families in Gaza as pen pals and champions for their fundraising campaigns to survive day-to-day life Gaza.  
 "
         button={
           <Link href="/volunteer">
